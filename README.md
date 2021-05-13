@@ -2,7 +2,7 @@
 
 
 - You have to configure **aws** on your cli and add **api key swaggerhub** to config file*
-- Copy config-sample.yml to config.yml*
+- Copy config-sample.yml to config.yml
 
 
 
