@@ -67,7 +67,7 @@ def read_swaggerhub(complete, owner, model, version, key):
 
 def read_aws(id, stage="prod", region="us-east-1", name_file="tmpfile"):
     name_file = f'{name_file}{int(random()*10)}'
-    command = f'aws apigateway get-export --rest-api-id {id} --region {region} --stage-name "{stage}" --export-type swagger /tmp/{name_file}.json'
+    command = f'aws apigateway get-export --parameters extensions=\'apigateway\' --rest-api-id {id} --region {region} --stage-name "{stage}" --export-type swagger /tmp/{name_file}.json'
     result = run_command(command, "")
     if result:
         data = read_file(f'/tmp/{name_file}.json')
